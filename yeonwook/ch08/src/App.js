@@ -1,4 +1,4 @@
-// import Info from './Info';
+// import Info.js from './Info.js';
 // import { useState } from "react";
 //
 // const App = () => {
@@ -14,7 +14,7 @@
 //         {visible ? '숨기기' : '보이기'}
 //       </button>
 //       <hr />
-//       {visible && <Info/>}
+//       {visible && <Info.js/>}
 //     </div>
 //   )
 // };
@@ -29,10 +29,10 @@
 //     )
 // }
 
-// import Info from './Info'
+// import Info.js from './Info.js'
 //
 // const App = () => {
-//     return <Info/>
+//     return <Info.js/>
 // }
 //
 // export default App;
