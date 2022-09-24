@@ -1,45 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useInputs } from 'react';
 
 const Info = () => {
-    const[name, setName] = useState('');
-    const[nickname, setNickname] = useState('');
-    useEffect(() => {
-        console.log('effect');
-        return() => {
-            console.log('unmount');
-        };
-    }, []);
-    /*
-    useEffect(() => {
-        console.log('effect');
-        console.log(name);
-        return () => {
-            console.log('cleanup');
-            console.log(name);
-        };
-    }, [name]);
-    */
-    /*
-    console.log('렌더링이 완료되었습니다!');
-        console.log({
-            name,
-            nickname
-        })
-     */
-
-    const onChangeName = e => {
-        setName(e.target.value);
-    };
-
-    const onChangeNickname = e => {
-        setNickname(e.target.value);
-    }
-
+    const [state, dispatch] = useInputs({
+        name: '',
+        nickname: ''
+    });
+    const {name, nickname} = state;
     return(
         <div>
             <div>
-                <input value={name} onChange={onChangeName}/>
-                <input value={nickname} onChange={onChangeNickname}/>
+                <input name="name" value={name} onChange={onChange}/>
+                <input name="nickname" value={nickname} onChange={onChange}/>
             </div>
             <div>
                 <div>
