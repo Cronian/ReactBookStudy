@@ -16,7 +16,7 @@ const App = () => {
             produce(draft => {
                 draft[name] = value;
             })
-        );용
+        );
       },[]
   );
 
